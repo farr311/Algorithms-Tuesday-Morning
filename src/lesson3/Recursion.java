@@ -8,11 +8,21 @@ public class Recursion {
             System.out.println(fibNonRec(i));
         }*/
 
-        double start = System.nanoTime();
+        /*double start = System.nanoTime();
        // System.out.println(fibRec(50));
         System.out.println(fibNonRec(1000));
 
-        System.out.println((System.nanoTime() - start) / 1_000_000_000);
+        System.out.println((System.nanoTime() - start) / 1_000_000_000);*/
+
+        System.out.println(fact(5));
+    }
+
+    static long fact(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+
+        return n * fact(n -1);
     }
 
     public static long fibRec(int n) {
