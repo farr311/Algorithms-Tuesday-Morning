@@ -51,21 +51,23 @@ public class Homework {
         return x * powerRec(x, n - 1);
     }
 
+
+    // Получение значение, равное x в степени n / 2
+    // Выполнить проверку n на четность
+    // Если n четное, возвести полученное число в квадрат
+    // В противном случае возвести в квадрат и умножить на x
     static long powerRecImproved(int x, int n) {
         if (n == 0) {
             return 1;
         }
 
-        // Получение значение, равное x в степени n / 2
-        // Выполнить проверку n на четность
-        // Если n четное, возвести полученное число в квадрат
-        // В противном случае возвести в квадрат и умножить на x
+        long half = powerRecImproved(x, n / 2);
 
-        //x^n
-        //x^n * x = x^(n+1)
-        //x^a * x^b = x^(a + b)
-
-        return x * powerRec(x, n - 1);
+        if (n % 2 == 0) {
+            return half * half;
+        } else {
+            return half * half * x;
+        }
     }
 
 }
