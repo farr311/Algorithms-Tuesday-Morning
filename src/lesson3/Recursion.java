@@ -41,6 +41,7 @@ public class Recursion {
         if (n == 1 || n == 2) {
             return 1;
         }
+        //Скидываю презентации по алгоритмам за сегодняшнее и прошлое занятия
 
         for (int i = 2; i < n; i++) {
             result = a + b;
