@@ -1,25 +1,28 @@
-package lesson5;
+package lesson6;
 
 import java.util.Arrays;
 
-public class MergeSortPractice {
+public class ClassWork {
 
     public static void main(String[] args) {
         int[] arr = new int[] { 2, 6, 87, 1, 0, 52, 42, 1, 5, 7 };
 
-        mergeSort(arr, 0, arr.length - 1);
+        mergeSort(arr);
 
         System.out.println(Arrays.toString(arr));
     }
 
-    static void mergeSort(int[] arr, int left, int right) {
-        if (left < right) {
-            int middle = (left + right) / 2;
+    static void mergeSort(int[] arr) {
+        // В условие одного из циклов вычисляется значение size, которое определяет размер рассматриваемого подмассива
+        // В условии другого цикла нужно прописать вычисление значения left
 
-            mergeSort(arr, left, middle);
-            mergeSort(arr, middle + 1, right);
+        for (...) {         // Написать условие цикла
+            for (...) {     // Написать условие цикла
+                // Вычислить значение right
+                // Вычислить значение middle
 
-            merge(arr, left, middle, right);
+                merge(arr, left, middle, right);
+            }
         }
     }
 
