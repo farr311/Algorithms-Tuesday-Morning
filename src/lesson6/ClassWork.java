@@ -7,19 +7,22 @@ public class ClassWork {
     public static void main(String[] args) {
         int[] arr = new int[] { 2, 6, 87, 1, 0, 52, 42, 1, 5, 7 };
 
+        // {1, 2, 3, 1, 4, 5 }
+
         mergeSort(arr);
+
+        Arrays.sort(arr);
 
         System.out.println(Arrays.toString(arr));
     }
 
     static void mergeSort(int[] arr) {
-        // В условие одного из циклов вычисляется значение size, которое определяет размер рассматриваемого подмассива
-        // В условии другого цикла нужно прописать вычисление значения left
+        int length = arr.length;
 
-        for (...) {         // Написать условие цикла
-            for (...) {     // Написать условие цикла
-                // Вычислить значение right
-                // Вычислить значение middle
+        for (int size = 1; size <= length - 1; size = size * 2) {
+            for (int left = 0; left < length - 1; left += size * 2) {
+                int middle = Math.min(left + size - 1, length - 1);       // Вычислить значение right
+                int right = Math.min(left + size * 2 - 1, length - 1);    // Вычислить значение middle
 
                 merge(arr, left, middle, right);
             }
