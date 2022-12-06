@@ -4,12 +4,18 @@ import java.util.Arrays;
 
 public class MergeSortPractice {
 
+    public static long count = 0;
+
     public static void main(String[] args) {
         int[] arr = new int[] { 2, 6, 87, 1, 0, 52, 42, 1, 5, 7 };
 
         mergeSort(arr, 0, arr.length - 1);
 
         System.out.println(Arrays.toString(arr));
+    }
+
+    public static void sort(int[] arr) {
+        mergeSort(arr, 0, arr.length - 1);
     }
 
     static void mergeSort(int[] arr, int left, int right) {
@@ -31,10 +37,14 @@ public class MergeSortPractice {
         int[] arrR = new int[index2];
 
         for (int i = 0; i < index1; i++) {
+            count++;
+
             arrL[i] = arr[i + left];
         }
 
         for (int i = 0; i < index2; i++) {
+            count++;
+
             arrR[i] = arr[middle + 1 + i];
         }
 
@@ -52,18 +62,24 @@ public class MergeSortPractice {
             }
 
             k++;
+
+            count++;
         }
 
         while (i < index1) {
             arr[k] = arrL[i];
             i++;
             k++;
+
+            count++;
         }
 
         while (j < index2) {
             arr[k] = arrR[j];
             j++;
             k++;
+
+            count++;
         }
     }
 }

@@ -4,12 +4,18 @@ import java.util.Arrays;
 
 public class QuickSort {
 
+    public static long count = 0;
+
     public static void main(String[] args) {
         int[] arr = new int[] { 2, 6, 87, 1, 0, 52, 42, 1, 5, 7 };
 
         quickSort(arr, 0, arr.length - 1);
 
         System.out.println(Arrays.toString(arr));
+    }
+
+    public static void sort(int[] arr) {
+        quickSort(arr, 0, arr.length - 1);
     }
 
     private static void quickSort(int[] arr, int low, int high) {
@@ -26,6 +32,8 @@ public class QuickSort {
         int pivotIndex = low - 1;
 
         for (int i = low; i < high; i++) {
+            count++;
+
             if (arr[i] <= pivot) {
                 pivotIndex++;
 
