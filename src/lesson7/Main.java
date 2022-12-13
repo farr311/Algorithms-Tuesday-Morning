@@ -16,21 +16,24 @@ public class Main {
     // (использовать System.nanoTime) до и после выполнения метода
 
     public static void main(String[] args) {
-        testBubble(1000);
+       /* testBubble(1000);
         testBubble(10000);
         testBubble(100000);
 
-        System.out.println("=".repeat(50));
+        System.out.println("=".repeat(50));*/
 
         testQuick(1000);
-        testQuick(10000);
-        testQuick(100000);
+        testQuick(1000);
+        testQuick(1000);
+        testQuick(1000);
+        /*testQuick(10000);
+        testQuick(100000);*/
 
         //Quick Sort, 1000: 10254 10072
         //Quick Sort, 10000: 150419 171430
         //Quick Sort, 100000: 2014781 1974068
 
-        System.out.println("=".repeat(50));
+        /*System.out.println("=".repeat(50));
 
         testMerge(1000);
         testMerge(10000);
@@ -40,7 +43,7 @@ public class Main {
 
         testDefault(1000);
         testDefault(10000);
-        testDefault(100000);
+        testDefault(100000);*/
     }
 
     static void testBubble(int n) {
