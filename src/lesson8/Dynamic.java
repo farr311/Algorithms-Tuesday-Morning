@@ -20,5 +20,7 @@ public interface Dynamic {
 
     void clear();
 
+    void print();
+
     void shrinkSize();
 }
